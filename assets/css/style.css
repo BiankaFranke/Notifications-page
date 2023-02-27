@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(0, 0%, 100%);
+}
+
+main {
+    padding: 1rem;
+    color: hsl(219, 12%, 42%);
+}
+
+h1 {
+    font-size: 20px;
+    color: hsl(224, 21%, 14%);
+}
+
+.user {
+    font-weight: 800;
+    text-decoration: none;
+    color: hsl(224, 21%, 14%);
+}
+
+.timestamp {
+    font-size: 14px;
+    color: hsl(219, 14%, 63%);
+}
+
+/* HEAD */
+
+.head, .head #notifications {
+    display: flex;
+    justify-content: space-around;
+}
+
+.head {
+    column-gap: 5rem;
+}
+
+.head #notifications {
+    display: flex;
+    justify-content: space-around;
+    column-gap: 0.5rem;
+}
+
+#unreadNotifications {
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.4rem;
+    font-weight: 800;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(219, 85%, 26%);
+}
+
+/* BUTTON */
+
+#unreadAll {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* IMAGES */
+.userPicture {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* UNREAD */
+
+.unreadNotification {
+    display: flex;
+    column-gap: 1rem;
+    background-color: hsl(210, 60%, 98%);
+    margin: 0.7rem 0rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.5rem;
+}
+
+/* LINKS */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* FOOTER */
