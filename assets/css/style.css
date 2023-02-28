@@ -15,7 +15,6 @@ body {
 }
 
 main {
-    max-width: 95vw;
     padding: 1rem;
     color: hsl(219, 12%, 42%);
 }
@@ -31,6 +30,10 @@ h1 {
     color: hsl(224, 21%, 14%);
 }
 
+.user:hover {
+    color: hsl(219, 85%, 26%);
+}
+
 .timestamp {
     font-size: 14px;
     color: hsl(219, 14%, 63%);
@@ -41,6 +44,10 @@ h1 {
     font-weight: 800;
     text-decoration: none;
     cursor: pointer;
+}
+
+.group:focus {
+    color: hsl(219, 12%, 42%);
 }
 
 .focusPart {
@@ -60,7 +67,7 @@ h1 {
 }
 
 .head {
-    max-width: 90vw;
+    padding: 0rem 1rem;
     column-gap: 5rem;
 }
 
@@ -100,11 +107,10 @@ h1 {
 /* UNREAD */
 
 .unreadNotification {
-    max-width: 90vw;
     display: flex;
     column-gap: 1rem;
     background-color: hsl(210, 60%, 98%);
-    margin: 0.7rem 0rem;
+    margin: 0.5rem;
     padding: 0.5rem 0.8rem;
     border-radius: 0.5rem;
 }
@@ -122,22 +128,33 @@ h1 {
 /* READ */
 
 .readNotification {
-    max-width: 90vw;
     display: flex;
     column-gap: 1rem;
-    margin: 2rem 0rem;
+    margin: 0.5rem;
+    padding: 0.5rem 0.8rem;
 }
 
 /* PRIVATE MESSAGE */
 
 .privateMessage {
-    max-width: 70vw;
+    display: flex;
     font-size: 14px;
+    justify-content: end;
+}
+
+.privateMessage p {
+    max-width: 40vw;
     margin: 0.7rem 1rem 2rem 0rem;
     border: 1px solid hsl(219, 14%, 63%);
     border-radius: 0.2rem;
     padding: 0.5rem;
-    background-color: red;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.privateMessage p:hover {
+    cursor: pointer;
+    animation-name: privateText;
+    animation-duration: 3s;  
 }
 
 /* LINKS */
@@ -157,8 +174,21 @@ footer {
     padding-bottom: 1rem;
 }
 
+/* ANIMATIONS */
 
-@media (min-width: 700px) {
+@keyframes privateText {
+    0% {
+        background-color: hsl(0, 0%, 100%);
+    }
+    
+    100% {
+        background-color: hsl(210, 60%, 98%);
+    }
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 600px) {
     body {
         display: flex;
         align-items: center;
@@ -170,6 +200,7 @@ footer {
     main {
         background-color: hsl(0, 0%, 100%);
         border-radius: 1rem;
+        margin: 1rem;
     }
 
     footer {
